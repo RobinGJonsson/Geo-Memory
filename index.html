@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Geo Memory</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <main>
+        <div class="title-box">
+            <div class="game-title">
+                <h1>Geo Memory Game</h1>
+            </div>
+            <div class="row">
+                <a data-toggle="modal" data-target="#instructionsModal" class="btn btn--big">Instructions</a>
+            </div>
+            <div class="row">
+                <a href="#" class="btn btn--big">Leaderboard</a>
+            </div>
+            <div class="row">
+                <a href="game.html" class="btn btn--big">Start Game</a>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Game Instructions</h4>
+                        <button class="close-btn" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>#</p>
+                        <p>#</p>
+                        <p>#</p>
+                        <p>#</p>
+                        <p>#</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn--small">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
