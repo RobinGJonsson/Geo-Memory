@@ -20,6 +20,20 @@ h6 {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.footer-cont {
+    width: 100%;
+    text-align: center;
+}
+
+.social-media {
+    color: black;
+    font-size: 200%;
+}
+
+.copy-right {
+    font-size: 80%;
+}
+
 .title-box {
     margin: 100px auto;
     width: 30%;
