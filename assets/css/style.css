@@ -4,11 +4,13 @@
 
 html {
     box-sizing: border-box;
+    min-height: 100vh;
 }
 
 body {
     padding: 0;
-    background-color: whitesmoke;
+    margin: 0;
+    background: radial-gradient(rgb(187, 202, 246), rgb(6, 106, 255));
 } 
 
 h1,
@@ -20,7 +22,9 @@ h6 {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.footer-cont {
+.footer-content {
+    clear: both;
+    bottom: 0;
     width: 100%;
     text-align: center;
 }
@@ -31,7 +35,7 @@ h6 {
 }
 
 .copy-right {
-    font-size: 80%;
+    font-size: 0.8rem;
 }
 
 .title-box {
@@ -43,6 +47,16 @@ h6 {
     font-size: 150%;
 }
 
+.btn--small {
+    width: 50px;
+    background-color: coral;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 5px 8px 0 black (0, 0, 0, 0.2);
+    line-height: 30px;
+    text-align: center;
+}
+
 .btn--big {
     margin: 20px auto;
     background-color: coral;
@@ -50,7 +64,7 @@ h6 {
     height: 50px;
     border-radius: 10px;
     border: 2px solid black;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    box-shadow:  0 5px 8px 0 black (0, 0, 0, 0.2);
     line-height: 50px;
 }
 
@@ -87,3 +101,73 @@ h6 {
     color: black;
     font-size: 30px;
 }
+
+.game-title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.difficulty {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+}
+
+.info-container {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+}
+
+.end-reset-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 50px;
+    background-color: blue;
+    grid-gap: 10px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.card-face {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 300ms ease-in-out;
+}
+
+.visible .card-front {
+    transform: rotateY(0);
+}
+
+.visible .card-back {
+    transform: rotateY(180deg);
+}
+
+.card-face:hover {
+    transition: transform 100ms ease-in-out;
+    transform: scale(1.1);
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    transform: rotateY(0);
+}
+
+
