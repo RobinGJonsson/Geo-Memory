@@ -107,3 +107,61 @@ document.addEventListener("DOMContentLoaded", e => {
         });
     });
 });
+
+function startGame(difficulty, lvl) {
+
+    document.querySelector('.lvl').innerText = lvl;
+    document.querySelector('.difficulty-lvl').innerText = difficulty;
+
+    //Make variable to append to the cards to 
+    let gameArea = document.querySelector('.game-area');
+
+    //Clear the game area
+    console.log(document.querySelectorAll('.card'))
+
+    document.querySelectorAll('.card').forEach(card => {
+        card.remove();
+    });
+
+    //Calculate amount of cards based on level 
+    cardCount = (lvl * 4 + 4)
+
+    //Create the cards 
+    let cards = addCards(cardCount);
+
+    //Clear matchedCards
+    matchedCards = [];
+    
+    //Set timer based on difficulty
+    let timer = document.querySelector('.timer')
+
+    switch (difficulty) {
+        case 'Easy':
+            timeLeft = 60;
+            timer.innerText = timeLeft;
+            break;
+        case 'Medium':
+            timeLeft = 45;
+            timer.innerText = timeLeft;
+            break;
+        case 'Hard':
+            timeLeft = 30;
+            timer.innerText = timeLeft;
+            break;
+    }
+
+    //set score and moves to 0
+    score = 0;
+    document.querySelector('.score').innerText = 0;
+    moves = 0;
+    document.querySelector('.moves').innerText = 0;
+
+    //Shuffle cards
+    shuffleCards(cards);
+
+    //Append the cards to the board
+    cards.forEach(card => gameArea.appendChild(card));
+
+    //Start timer
+    startTimer(timeLeft);
+}
