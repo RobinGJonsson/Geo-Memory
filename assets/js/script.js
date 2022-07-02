@@ -1,45 +1,35 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-let imageList = [
-{name: 'Agra India', img: 'images/Agra India.jpg'}, 
-{name: 'Athens Greece', img: 'images/Athens Greece.jpg'}, 
-{name: 'Dubai United Arab Emirates', img: 'images/Dubai United Arab Emirates.jpg'}, 
-{name: 'London', img: 'images/London.jpg'}, 
-{name: 'Malmo Sweden', img: 'images/Malmo Sweden.jpg'}, 
-{name: 'Moscow Russia', img: 'images/Moscow Russia.jpg'}, 
-{name: 'New York USA', img: 'images/New York USA.jpg'}, 
-{name: 'Rome Italy', img: 'images/Rome Italy.jpg'},
-{name: 'Sydney Austrailia', img: 'images/Sydney Austrailia.jpg'},
-{name: 'Paris France', img: 'images/Paris France.jpg'}]
+//ADD docstrings
+//when two cards have been flipped Make so that the cards flip back over when a new card is clicked and disregard the default timer  
+//Calculate score etc on win screen 
+//Start timer after first flipped card
 
-document.addEventListener("DOMContentLoaded", e => {
-    console.log('page loaded')
-});
+const imageList = ['assets/images/india.jpg', 'assets/images/greece.jpg',
+'assets/images/dubai.jpg','assets/images/uk.jpg', 'assets/images/sweden.jpg',
+'assets/images/russia.jpg', 'assets/images/usa.jpg', 'assets/images/italy.jpg', 
+'assets/images/austrailia.jpg', 'assets/images/france.jpg']
 
-function createBoard() {
-    for (image of imageList) {
-        let card = document.createElement('div');
-        card.classList.add('card');
+//Contains the matched cards 
+let matchedCards = [];
 
-        card.appendChild(document.createElement('img'))
-        let cardChild = card.firstChild
-        cardChild.
-               
-        let gameArea = document.querySelector('.game-content');
-        gameArea.append(card)
-    }
-}
+//Will recive the first flipped card of and revert back to null after the second card is flipped 
+let cardToCheck = null
 
-function timer() {
-    let timeLeft = 5;
-    let time = document.querySelector('.timer');
-    let countdown = setInterval(e => {
-        timeLeft--
-        time.innerText = timeLeft;
-        if (timeLeft < 1){
-            clearInterval(countdown)
-        }
-    }, 1000);
-}
+//Declare difficulty
+let difficulty = 'Easy';
 
-createBoard()
+//Declare lvl
+let lvl = 1;
+
+//Timer value
+let timeLeft = 0;
+
+//Score value
+let score = 0;
+
+//Moves value
+let moves = 0;
+
+//The total number of cards 
+let cardCount = 0;
+
+let timer = null;
