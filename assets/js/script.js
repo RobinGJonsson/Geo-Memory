@@ -237,3 +237,43 @@ function flipCard(card) {
         }
     }
 }
+
+function shuffleCards(cardArray) {
+
+    for (var i = cardArray.length - 1; i > 0; i--) {
+        let randIndex = Math.floor(Math.random() * (i + 1));
+        cardArray[randIndex].style.order = i;
+        cardArray[i].style.order = randIndex;
+    };
+}
+
+function hideCards(card1, card2) {
+
+    [card1, card2].forEach(card => {
+        card.classList.remove('visible') 
+    });
+}
+
+function startTimer(time) {
+    
+    //Timer value will be based on difficulty 
+    let gametimer = document.querySelector('.timer');
+
+    //Set timer interval to 1 second
+    timer = setInterval(() => {
+        time--
+        timeLeft = time;
+        gametimer.innerText = time;
+
+        //If time runs out call gameOver 
+        if (time == 0){
+            stopTimer(timer)
+            gameOver();
+        }
+    }, 1000);
+}
+
+function stopTimer(timer) {
+    clearInterval(timer);
+    console.log('stopped timer')
+}
