@@ -210,3 +210,30 @@ function addCards(cardCount) {
     };
     return cardArray;
 };
+
+function canFlip(card) {
+    console.log('checking to flip ', card)
+    //If card does not have the class of visible return true else false
+    return !card.classList.contains('visible');
+}
+
+function flipCard(card) {
+
+    if (canFlip(card)) {
+        console.log(card, 'can be flipped ')
+        //Increment flips 
+        ++moves;
+        document.querySelector('.moves').innerText = moves;
+
+        card.classList.add('visible');
+
+        //Hide the cards when a new card is clicked 
+        if (cardToCheck) {
+            //Check if cardToCheck content is equal to the flipped card
+            checkMatch(card, cardToCheck);
+            cardToCheck = null;
+        } else {
+            cardToCheck = card;
+        }
+    }
+}
