@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500&display=swap');
-
+/*Add hover to buttons */
+/*Add change to buttons on click*/
+/*Add styling to modals*/
+/**/
+/**/
 *, *::before, *::after {box-sizing: inherit;}
 
 html {
@@ -20,6 +24,10 @@ h4,
 h5,
 h6 {
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.btn {
+    cursor: pointer;
 }
 
 .footer-content {
@@ -68,6 +76,7 @@ h6 {
     line-height: 50px;
 }
 
+
 .modal {
     display: none;
     position: fixed;
@@ -78,6 +87,13 @@ h6 {
     height: 100%;
     z-index: 1;
     overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Game start modal is displayed by default*/
+.game-start.modal {
+    display: block;
 }
 
 .modal-content {
@@ -96,7 +112,7 @@ h6 {
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: white;
+    background: none;
     border: none;
     color: black;
     font-size: 30px;
@@ -149,25 +165,34 @@ h6 {
     transition: transform 300ms ease-in-out;
 }
 
-.visible .card-front {
+.card.visible .card-front {
     transform: rotateY(0);
-}
-
-.visible .card-back {
-    transform: rotateY(180deg);
-}
+  }
+  
+.card.visible .card-back {
+    transform: rotateY(-180deg)
+  }  
 
 .card-face:hover {
     transition: transform 100ms ease-in-out;
     transform: scale(1.1);
 }
 
+.card-back {
+    transform: rotateY(0);
+}
+
 .card-front {
     transform: rotateY(180deg);
 }
 
-.card-back {
-    transform: rotateY(0);
+.win .modal-content, .lose .modal-content {
+    background-color: gray;
+    width: 500px;
+    height: 250px;
+    text-align: center;
 }
+
+
 
 
