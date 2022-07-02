@@ -277,3 +277,47 @@ function stopTimer(timer) {
     clearInterval(timer);
     console.log('stopped timer')
 }
+
+function checkMatch(card1, card2) {
+
+    let cardImg1 = card1.querySelector('.front-img').getAttribute('src')
+    let cardImg2 = card2.querySelector('.front-img').getAttribute('src')
+
+    if (cardImg1 === cardImg2) {
+        //If they match add the card to matchedCards
+        matchedCards.push(card1, card2);
+
+        //Increment score 
+        score += 10;
+        document.querySelector('.score').innerText = score;
+
+        if (matchedCards.length === cardCount) {
+            stopTimer(timer);
+            gameWin();
+
+        }
+    } else {
+        //If they don't match flip back over
+        let time = 2000;
+        switch (difficulty) {
+            case 'Easy':
+                time = 2000;
+                break;
+            case 'Medium':
+                time = 1000;
+                break;
+            case 'Hard':
+                time = 500;
+                break;
+        }
+
+        //Decrement score
+        score -= 2;
+        document.querySelector('.score').innerText = score;
+
+        //Display cards for seconds based on difficulty 
+        setTimeout(() => {
+            hideCards(card1, card2)
+        }, time)
+    }
+}
