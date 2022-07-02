@@ -321,3 +321,21 @@ function checkMatch(card1, card2) {
         }, time)
     }
 }
+
+function gameOver() {
+    //Make submit high score 
+
+    //Display lose modal when game over
+    document.querySelector('.lose.modal').style.display = 'block';
+
+    calcScore();
+}
+
+function gameWin() {
+    //Make submit high score 
+
+    //Display lose modal when game over
+    document.querySelector('.win.modal').style.display = 'block';
+
+    calcScore();
+}
