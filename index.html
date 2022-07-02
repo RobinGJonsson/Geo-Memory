@@ -15,7 +15,7 @@
                 <h1>Geo Memory Game</h1>
             </div>
             <div class="row btn btn--big">
-                <a data-toggle="modal" data-target="#instructionsModal">Instructions</a>
+                <span class="instructions-btn">Instructions</span>
             </div>
             <div class="row btn btn--big">
                 <a href="#">Leaderboard</a>
@@ -24,11 +24,11 @@
                 <a href="game.html">Start Game</a>
             </div>
         </div>
-        <div class="modal">
+        <div class="instructions modal">
             <div class="modal-content">
                 <div class="modal-header">
                     <h2>Game Instructions</h2>
-                    <button class="close-btn" data-dismiss="modal">
+                    <button class="close-btn close-modal">
                         <span>&times;</span>
                     </button>
                 </div>
@@ -47,7 +47,7 @@
                         ad aliquid ut nemo porro officia reiciendis, repellat culpa magnam at!</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn--small">Close</button>
+                    <button class="btn btn--small close-modal">Close</button>
                 </div>
             </div>
         </div>
@@ -64,6 +64,24 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script>
+        //Open instructions modal if instructrions button is clicked
+        document.querySelector('.instructions-btn').addEventListener('click', e => {
+        document.querySelector('.instructions.modal').style.display = 'block';
+        });
+
+        //If close modal button is clicked the modals will display none 
+        let allCloseBtns = document.querySelectorAll('.close-modal');
+        let allModals = document.querySelectorAll('.modal');
+            allCloseBtns.forEach(closeBtn => {
+                //Change to choose a specific modal 
+                //Change all modals on page to display none
+                closeBtn.addEventListener('click', e => {
+                    allModals.forEach(modal => {
+                        modal.style.display = 'none'
+                    });
+                });
+            });
+    </script>
 </body>
 </html>
