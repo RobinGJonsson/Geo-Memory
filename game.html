@@ -36,6 +36,65 @@
                 <a href="game.html">Restart <!-- make an actual reset and not a refresh?--></a>
             </div>
         </div>
+        <div class="game-start modal">
+            <div class="modal-content">
+                <div class="choose-difficulty">
+                    <h3>Select Difficulty</h3>
+                    <label for="easy">Easy</label>
+                    <input type="radio" id="easy" name="difficulty" value="Easy" checked>
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="medium" name="difficulty" value="Medium">
+                    <label for="hard">Hard</label>
+                    <input type="radio" id="hard" name="difficulty" value="Hard">
+                </div>
+                <div class="choose-lvl">
+                    <label for="lvl1">Level 1</label>
+                    <input type="radio" id="lvl1" name="lvl" value="1" checked>
+                    <label for="lvl2">Level 2</label>
+                    <input type="radio" id="lvl2" name="lvl" value="2">
+                    <label for="lvl3">Level 3</label>
+                    <input type="radio" id="lvl3" name="lvl" value="3">
+                </div>
+                <button class="start btn btn--big close-modal">Start Game</button>
+            </div>
+        </div>
+        <div class="win modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>You Win!</h2>
+                    <p>Nice you got them all correct, you can move on to the next level</p>
+                    <button class="close-btn close-modal" href="index.html">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Score: <span class="score"></span></p>
+                    <p>Time Multiplier: x<span class="time-mlp"></span></p>
+                    <p><span class="difficulty"></span> Difficulty: x<span class="dif-mlp"></span></p>
+                    <p>Final Score: <span class="final-score"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="nxt-lvl close-modal">Next Level</button>
+                </div>
+            </div>
+        </div>
+        <div class="lose modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>You Lose</h2>
+                    <p>Ouch, well you can't win them all</p>
+                    <button class="close-btn" href="index.html">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Score: <span class="score"></span></p>
+                    <p>Time Multiplier: x<span class="time-mlp"></span></p>
+                    <p><span class="difficulty"></span>Difficulty: x<span class="dif-mlp"></span></p>
+                    <p>Final Score: <span class="final-score"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="highscore btn--big close-modal">Submit Highscore</button>
+                    <a href="game.html" class="new-game btn btn--big close-modal">Play Again</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
