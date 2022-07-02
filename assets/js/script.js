@@ -165,3 +165,48 @@ function startGame(difficulty, lvl) {
     //Start timer
     startTimer(timeLeft);
 }
+
+function addCards(cardCount) {
+    //Array of elements to append
+    let cardArray = [];
+
+    //Create the cards
+    for (const image of imageList.slice(0, (cardCount/2))) {
+        console.log(imageList.slice(0, (cardCount/2)))
+        console.log('image', image)
+
+        //Create two of the same card
+        for (var i = 0; i < 2; i++) {
+            let card = document.createElement('div');
+            card.classList.add('card')
+            
+            //Create card back and front 
+            let cardFront = document.createElement('div');
+            let cardBack = document.createElement('div');
+            let frontImg = document.createElement('img');
+            let backImg = document.createElement('img');
+            //Give the elements classes and attributes
+            cardFront.classList.add('card-front', 'card-face');
+            cardBack.classList.add('card-back', 'card-face');
+            frontImg.classList.add('front-img')
+            frontImg.setAttribute('src', image);
+            backImg.setAttribute('src', 'assets/images/back.jpg');
+
+            //Append img elements to the front and back classes
+            cardFront.append(frontImg);
+            cardBack.append(backImg);
+
+            //Append both sides of the card to card
+            card.append(cardFront);
+            card.append(cardBack);
+ 
+            card.addEventListener('click', e => {
+                flipCard(card);
+            });
+
+            //Append card to a list to append to the gameArea after loop is finished
+            cardArray.push(card);
+        };
+    };
+    return cardArray;
+};
