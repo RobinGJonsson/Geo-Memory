@@ -13,132 +13,27 @@
         <h1 class="game-title">Geo Memory Game</h1>
         <div class="game-area">
             <div class="difficulty">
-                <h3 class="lvl">Level count</h3>
-                <h3 class="difficulty-lvl">difficulty level</h3>
+                <h3>Level: <span class="lvl">1</span></h3>
+                <h3>Difficulty: <span class="difficulty-lvl">Easy</span></h3>
             </div>
             <div class="info-container">
                 <div class="info">
-                    Time Left: <span id="timer">60</span>
+                    Time Left: <span class="timer">60</span>
                 </div>
                 <div class="info">
-                    Score <span id="score">add js</span>
+                    Score: <span class="score">0</span>
                 </div>
                 <div class="info">
-                    Errors <span id="incorrect-moves">add js</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>            
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>            
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>            
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>            
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>            
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
-                </div>
-            </div>            
-            <div class="card">
-                <div class="card-back card-face">
-                    <img class="back-img" src="assets/images/back.jpg" alt="">
-                </div>
-                <div class="card-front card-face">
-                    <img class="front-img" src="assets/images/Agra India.jpg" alt="">
+                    Moves: <span class="moves">0</span>
                 </div>
             </div>
         </div>
-        <!--
-            contains game:
-            default level 4x2 cards
-            increasing level by multiples of 4 (or multiples of 3 wild card gives extra points when they say it doesn't belong?)
-            -->
-        <section>
-            <div class="end-reset-container">
-                <div class="btn btn--small">
-                    <a href="index.html">Exit</a>
-                </div>
-                <div class="btn btn--small">
-                    <a href="game.html">Restart <!-- make an actual reset and not a refresh?--></a>
-                </div>
+        <div class="end-reset-container">
+            <div class="btn btn--small">
+                <a href="index.html">Exit</a>
             </div>
-        </section>
-        <!--save results to leaderboard?
-            increasing difficulty (level up and options)?
-            generate through JS?-->
-        <div class="win modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>You Win!</h2>
-                    <button class="close-btn" data-dismiss="modal">
-                </div>
-                <div class="modal-body">
-                    <p>Your Score</p>
-                    <p>Nice you got them all correct, you can move on to the next level</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="nxt-lvl">Next Level</button>
-                    <button class="btn btn--small">Close</button>
-                </div>
-            </div>
-        </div>
-        <div class="lose modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>You Lose</h2>
-                </div>
-                <div class="modal-body">
-                    <p>Your Score</p>
-                    <p>Ouch, well we can't win them all</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="highscore">Submit Highscore</button>
-                    <button class="btn btn--small">Close</button>
-                </div>
+            <div class="btn btn--small">
+                <a href="game.html">Restart <!-- make an actual reset and not a refresh?--></a>
             </div>
         </div>
     </main>
