@@ -26,6 +26,8 @@ let timeLeft = 0;
 //Score value
 let score = 0;
 
+let savedScore = 0; 
+
 //Moves value
 let moves = 0;
 
@@ -33,6 +35,8 @@ let moves = 0;
 let cardCount = 0;
 
 let timer = null;
+
+let flippedTimer = null;
 
 //Call gameOptions when DOM is loaded 
 document.addEventListener("DOMContentLoaded", e => {
@@ -82,7 +86,7 @@ document.addEventListener("DOMContentLoaded", e => {
     //Need to add to the game page specifically??????
     document.querySelector('.start').addEventListener('click', () => {
         startGame(difficulty, lvl);
-        score = 0;
+        savedScore = 0;
     });
 
     //Increment one level when next level button is clicked and start game 
@@ -93,7 +97,7 @@ document.addEventListener("DOMContentLoaded", e => {
     //Open game-start modal to allow change in difficulty and level
     document.querySelector('.new-game').addEventListener('click', () => {
         document.querySelector('.game-start.modal').style.display = 'block';
-        score = 0;
+        savedScore = 0;
     });
 
     //If close modal button is clicked the modals will display none 
@@ -136,6 +140,8 @@ function startGame(difficulty, lvl) {
     
     //Set timer based on difficulty
     let timer = document.querySelector('.timer')
+
+    score = 0;
 
     switch (difficulty) {
         case 'Easy':
@@ -220,6 +226,14 @@ function canFlip(card) {
 
 function flipCard(card) {
 
+    let activeCards = document.querySelectorAll('.active');
+    console.log(activeCards)
+    
+    if (activeCards.length == 2) {
+        hideCards(activeCards) 
+        clearTimeout(flippedTimer)
+    }
+
     if (canFlip(card)) {
         console.log(card, 'can be flipped ')
         //Increment flips 
@@ -227,6 +241,7 @@ function flipCard(card) {
         document.querySelector('.moves').innerText = moves;
 
         card.classList.add('visible');
+        card.classList.add('active');
 
         //Hide the cards when a new card is clicked 
         if (cardToCheck) {
@@ -248,10 +263,10 @@ function shuffleCards(cardArray) {
     };
 }
 
-function hideCards(card1, card2) {
+function hideCards(cardArray) {
 
-    [card1, card2].forEach(card => {
-        card.classList.remove('visible') 
+    cardArray.forEach(card => {
+        card.classList.remove('visible', 'active') 
     });
 }
 
@@ -287,6 +302,11 @@ function checkMatch(card1, card2) {
     if (cardImg1 === cardImg2) {
         //If they match add the card to matchedCards
         matchedCards.push(card1, card2);
+        
+        [card1, card2].forEach(card => {
+            card.classList.remove('active')
+            console.log('remove active from', card)
+        });
 
         //Increment score 
         score += 10;
@@ -299,16 +319,16 @@ function checkMatch(card1, card2) {
         }
     } else {
         //If they don't match flip back over
-        let time = 2000;
+        let time = 1000;
         switch (difficulty) {
             case 'Easy':
-                time = 2000;
-                break;
-            case 'Medium':
                 time = 1000;
                 break;
-            case 'Hard':
+            case 'Medium':
                 time = 500;
+                break;
+            case 'Hard':
+                time = 250;
                 break;
         }
 
@@ -317,8 +337,8 @@ function checkMatch(card1, card2) {
         document.querySelector('.score').innerText = score;
 
         //Display cards for seconds based on difficulty 
-        setTimeout(() => {
-            hideCards(card1, card2)
+        flippedTimer = setTimeout(() => {
+            hideCards([card1, card2])
         }, time)
     }
 }
@@ -367,12 +387,17 @@ function calcScore() {
         //Display time multiplier
         (document.querySelectorAll('.time-mlp')).forEach(timeElement => {
             console.log(timeElement)
+            timeLeft = timeLeft == 0 ? 1 : timeLeft;
+            timeElement.innerText = timeLeft;
+        });
 
-            timeElement.innerText = ((timeLeft == 0) ? 1 : timeLeft);
+        (document.querySelectorAll('.saved-score')).forEach(savedScoreElement => {
+            savedScoreElement.innerText = savedScore;            
         });
 
         //Calculate final score and display it 
-        let finalScore = (score * difMlp * timeLeft);
+        let finalScore = savedScore + (score * difMlp * timeLeft);
+        savedScore = finalScore;
         (document.querySelectorAll('.final-score')).forEach(finalScoreElement => {
             console.log(finalScoreElement)
             finalScoreElement.innerText = finalScore;
