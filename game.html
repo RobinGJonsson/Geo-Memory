@@ -10,7 +10,7 @@
 </head>
 <body>
     <main>
-        <h1 class="game-title">Geo Memory Game</h1>
+        <h1 class="game-title"><a href="index.html">Geo Memory Game</a></h1>
         <div class="game-area">
             <div class="difficulty">
                 <h3>Level: <span class="lvl">1</span></h3>
@@ -63,16 +63,17 @@
                 <div class="modal-header">
                     <h2>You Win!</h2>
                     <p>Nice you got them all correct, you can move on to the next level</p>
-                    <button class="close-btn close-modal" href="index.html">&times;</button>
+                    <button class="btn close-btn close-modal" href="index.html">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
                     <p>Time Multiplier: x<span class="time-mlp"></span></p>
-                    <p><span class="difficulty"></span> Difficulty: x<span class="dif-mlp"></span></p>
+                    <p><span class="difficulty"></span> Difficulty Multiplier: x<span class="dif-mlp"></span></p>
+                    <p>Accumulated Score: +<span class="saved-score"></span></p>
                     <p>Final Score: <span class="final-score"></span></p>
                 </div>
                 <div class="modal-footer">
-                    <button class="nxt-lvl close-modal">Next Level</button>
+                    <button class="nxt-lvl btn close-modal">Next Level</button>
                 </div>
             </div>
         </div>
@@ -81,16 +82,17 @@
                 <div class="modal-header">
                     <h2>You Lose</h2>
                     <p>Ouch, well you can't win them all</p>
-                    <button class="close-btn" href="index.html">&times;</button>
+                    <button class="close-btn btn close-modal href="index.html">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
                     <p>Time Multiplier: x<span class="time-mlp"></span></p>
-                    <p><span class="difficulty"></span>Difficulty: x<span class="dif-mlp"></span></p>
+                    <p><span class="difficulty"></span>Difficulty Multiplier: x<span class="dif-mlp"></span></p>
+                    <p>Accumulated Score: +<span class="saved-score"></span></p>
                     <p>Final Score: <span class="final-score"></span></p>
                 </div>
                 <div class="modal-footer">
-                    <button class="highscore btn--big close-modal">Submit Highscore</button>
+                    <button class="highscore btn--big close-modal"><a href="leaderboard.html">Submit Highscore</a></button>
                     <a href="game.html" class="new-game btn btn--big close-modal">Play Again</a>
                 </div>
             </div>
