@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", e => {
     //Need to add to the game page specifically??????
     document.querySelector('.start').addEventListener('click', () => {
         startGame(difficulty, lvl);
+        score = 0;
     });
 
     //Increment one level when next level button is clicked and start game 
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", e => {
     //Open game-start modal to allow change in difficulty and level
     document.querySelector('.new-game').addEventListener('click', () => {
         document.querySelector('.game-start.modal').style.display = 'block';
+        score = 0;
     });
 
     //If close modal button is clicked the modals will display none 
@@ -151,8 +153,7 @@ function startGame(difficulty, lvl) {
     }
 
     //set score and moves to 0
-    score = 0;
-    document.querySelector('.score').innerText = 0;
+    document.querySelector('.score').innerText = score;
     moves = 0;
     document.querySelector('.moves').innerText = 0;
 
@@ -323,8 +324,6 @@ function checkMatch(card1, card2) {
 }
 
 function gameOver() {
-    //Make submit high score 
-
     //Display lose modal when game over
     document.querySelector('.lose.modal').style.display = 'block';
 
@@ -339,3 +338,45 @@ function gameWin() {
 
     calcScore();
 }
+
+function calcScore() {
+
+        //Display difficulty multiplier 
+        let difMlp = 1; 
+        switch (difficulty) {
+            case 'Easy':
+                difMlp = 1;
+                break;
+            case 'Medium':
+                difMlp = 2;
+                break;
+            case 'Hard':
+                difMlp = 3;
+                break;
+        }
+
+        (document.querySelectorAll('.dif-mlp')).forEach(difElement => {
+            difElement.innerText = difMlp;
+        });
+    
+        //Display the score
+        (document.querySelectorAll('.score')).forEach(scoreElement => {
+            scoreElement.innerText = score;
+        });
+
+        //Display time multiplier
+        (document.querySelectorAll('.time-mlp')).forEach(timeElement => {
+            console.log(timeElement)
+
+            timeElement.innerText = ((timeLeft == 0) ? 1 : timeLeft);
+        });
+
+        //Calculate final score and display it 
+        let finalScore = (score * difMlp * timeLeft);
+        (document.querySelectorAll('.final-score')).forEach(finalScoreElement => {
+            console.log(finalScoreElement)
+            finalScoreElement.innerText = finalScore;
+        });
+
+}
+
