@@ -132,6 +132,10 @@ function startGame(difficulty, lvl) {
     //Calculate amount of cards based on level 
     cardCount = (lvl * 4 + 4)
 
+    if (lvl > 3) {
+        gameArea.style.gridTemplateColumns = 'repeat(5, auto)'
+    }
+
     //Create the cards 
     let cards = addCards(cardCount);
 
@@ -157,6 +161,9 @@ function startGame(difficulty, lvl) {
             timer.innerText = timeLeft;
             break;
     }
+
+    //Add 5 seconds for each level
+    timeLeft += (5 * (lvl - 1))
 
     //set score and moves to 0
     document.querySelector('.score').innerText = score;

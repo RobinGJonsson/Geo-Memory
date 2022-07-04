@@ -9,3 +9,5 @@ Paris France Image:https://www.pexels.com/photo/photo-of-cars-parked-on-side-of-
 Rome Italy Image:https://www.pexels.com/photo/administration-ancient-arches-architecture-356966/
 London England Image: https://www.pexels.com/photo/bridge-over-river-in-city-258117/
 Athens Greece Image: https://www.pexels.com/photo/ruins-of-a-temple-with-ancient-architectural-design-6336038/
+
+shuffleCards function is based on Fisher Yates algorithm that I found on https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/

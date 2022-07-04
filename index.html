@@ -14,11 +14,11 @@
             <div class="game-title">
                 <h1>Geo Memory Game</h1>
             </div>
-            <div class="row btn btn--big">
-                <span class="instructions-btn">Instructions</span>
+            <div class="row btn btn--big instructions-btn">
+                Instructions
             </div>
             <div class="row btn btn--big">
-                <a href="#">Leaderboard</a>
+                <a href="leaderboard.html">Leaderboard</a>
             </div>
             <div class="row btn btn--big">
                 <a href="game.html">Start Game</a>
@@ -28,23 +28,33 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2>Game Instructions</h2>
-                    <button class="close-btn close-modal">
+                    <button class="btn close-btn close-modal">
                         <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Earum magni eius in placeat ullam, accusantium voluptatem dolorum neque quisquam 
-                        ad aliquid ut nemo porro officia reiciendis, repellat culpa magnam at!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Earum magni eius in placeat ullams, repellat culpa magnam at!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        ad aliquid ut nemo porro officia reiciendis, repellat culpa magnam at!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Earum magni eius in placeat ullam, accusantium voluptatem dolorum neque quisquam 
-                        ad aliquid ut nemo porro officia reiciendis, repellat culpa magnam at!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        ad aliquid ut nemo porro officia reiciendis, repellat culpa magnam at!</p>
+                    <h2>The Rules</h2>
+                    <p>The rules are simple, a random order of cards. Click a card and it will flip and show a picture of a famous building or place. 
+                        When you click a second card it too will flip and display its image. If the cards match they will stay face up. 
+                        If they don't the cards match the cards will flip back over when you click another card or when the cards have stayed
+                        up for a time based on difficulty level.
+                    </p>
+                    <h2>Difficulty</h2>
+                    <p>Difficulty is chosen by the player and sets the timer and the time cards stay face up.</p>
+                    <ul class="dif-inst">
+                        <li>Easy: Timer 60 seconds, cards flip back after 1 second</li>
+                        <li>Medium: Timer 45 seconds, cards flip back after 0.5 seconds</li>
+                        <li>Hard: Timer 30 seconds, cards flip back after 0.25 seconds</li>
+                    </ul>
+                    <h2>Levels</h2>
+                    <p>Level 1 starts at four pairs, two more pairs will be added for each new level. Five seconds will be added to
+                        the timer for each level.
+                    </p>
+                    <h2>Score</h2>
+                    <p>10 points are added to score for each pair, 2 points are subtratced from score after each incorrect pair. Total score 
+                        is calculated by multiplying the score with a time multiplier and a difficulty multiplier. The previous levels score 
+                        carries over to the next level and is added to the score of the current level.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn--small close-modal">Close</button>
