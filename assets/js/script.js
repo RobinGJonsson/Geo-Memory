@@ -320,7 +320,8 @@ function checkMatch(card1, card2) {
         if (matchedCards.length === cardCount) {
             stopTimer(timer);
 
-            if (lvl < 5) {
+            //If the level is less than 4  run gameOver win, else the game has reached the end and run gameover
+            if (lvl < 4) {
                 gameOver('win');    
             } else {
                 gameOver('game-over')

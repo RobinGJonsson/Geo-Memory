@@ -11,3 +11,7 @@ London England Image: https://www.pexels.com/photo/bridge-over-river-in-city-258
 Athens Greece Image: https://www.pexels.com/photo/ruins-of-a-temple-with-ancient-architectural-design-6336038/
 
 shuffleCards function is based on Fisher Yates algorithm that I found on https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
+
+
+bugs: 
+Can't make the instructions content is to long to show all of it, and overflows from the viewport and doesn't scroll 
