@@ -186,8 +186,6 @@ function addCards(cardCount) {
 
     //Create the cards
     for (const image of imageList.slice(0, (cardCount/2))) {
-        console.log(imageList.slice(0, (cardCount/2)))
-        console.log('image', image)
 
         //Create two of the same card
         for (var i = 0; i < 2; i++) {
@@ -288,10 +286,10 @@ function startTimer(time) {
         timeLeft = time;
         gametimer.innerText = time;
 
-        //If time runs out call gameOver 
+        //If time runs out call gameLose
         if (time == 0){
             stopTimer(timer)
-            gameOver();
+            gameOver('lose');
         }
     }, 1000);
 }
@@ -321,8 +319,12 @@ function checkMatch(card1, card2) {
 
         if (matchedCards.length === cardCount) {
             stopTimer(timer);
-            gameWin();
 
+            if (lvl < 5) {
+                gameOver('win');    
+            } else {
+                gameOver('game-over')
+            }
         }
     } else {
         //If they don't match flip back over
@@ -350,20 +352,13 @@ function checkMatch(card1, card2) {
     }
 }
 
-function gameOver() {
-    //Display lose modal when game over
-    document.querySelector('.lose.modal').style.display = 'block';
-
-    calcScore();
-}
-
-function gameWin() {
-    //Make submit high score 
+function gameOver(gameEndReason) {
+     //Make submit high score 
 
     //Display lose modal when game over
-    document.querySelector('.win.modal').style.display = 'block';
+    document.querySelector(`.${gameEndReason}.modal`).style.display = 'block';
 
-    calcScore();
+    calcScore();   
 }
 
 function calcScore() {

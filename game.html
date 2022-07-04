@@ -63,7 +63,7 @@
                 <div class="modal-header">
                     <h2>You Win!</h2>
                     <p>Nice you got them all correct, you can move on to the next level</p>
-                    <button class="btn close-btn close-modal" href="index.html">&times;</button>
+                    <a href="index.html"><button class="btn close-btn close-modal">&times;</button></a>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
@@ -82,7 +82,27 @@
                 <div class="modal-header">
                     <h2>You Lose</h2>
                     <p>Ouch, well you can't win them all</p>
-                    <button class="close-btn btn close-modal href="index.html">&times;</button>
+                    <a href="index.html"><button class="close-btn btn close-modal">&times;</button></a>
+                </div>
+                <div class="modal-body">
+                    <p>Score: <span class="score"></span></p>
+                    <p>Time Multiplier: x<span class="time-mlp"></span></p>
+                    <p><span class="difficulty"></span>Difficulty Multiplier: x<span class="dif-mlp"></span></p>
+                    <p>Accumulated Score: +<span class="saved-score"></span></p>
+                    <p>Final Score: <span class="final-score"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="highscore btn--big close-modal"><a href="leaderboard.html">Submit Highscore</a></button>
+                    <a href="game.html" class="new-game btn btn--big close-modal">Play Again</a>
+                </div>
+            </div>
+        </div>
+        <div class="game-over modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>You Beat the Game!</h2>
+                    <p>WOW Well Done, You Are Extremely Smart!</p>
+                    <a href="index.html"><button class="close-btn btn close-modal">&times;</button></a>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
