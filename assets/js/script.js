@@ -178,6 +178,9 @@ function startGame(difficulty, lvl) {
 
     //Start timer
     startTimer(timeLeft);
+
+    //When game starts the view will be of the board
+    gameArea.scrollIntoView();
 }
 
 function addCards(cardCount) {

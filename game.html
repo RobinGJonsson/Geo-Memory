@@ -10,15 +10,19 @@
 </head>
 <body>
     <main>
+        <!--Game title-->
         <h1 class="game-title"><a href="index.html">Geo Memory Game</a></h1>
+        <!--Game board are-->
         <div class="game-area">
+            <!--Displays current difficulty and level -->
             <div class="difficulty">
                 <h3>Level: <span class="lvl">1</span></h3>
                 <h3>Difficulty: <span class="difficulty-lvl">Easy</span></h3>
             </div>
+            <!--Conatains the timeleft, the score and how many moves has been made-->
             <div class="info-container">
                 <div class="info">
-                    Time Left: <span class="timer">60</span>
+                    Time Left: <span class="timer"></span>
                 </div>
                 <div class="info">
                     Score: <span class="score">0</span>
@@ -28,6 +32,7 @@
                 </div>
             </div>
         </div>
+        <!--Contains reset and end game button-->
         <div class="end-reset-container">
             <div>
                 <a href="index.html"><button class="btn btn--small">Exit</button></a>
@@ -36,6 +41,8 @@
                 <a href="game.html"><button class="btn btn--small">Restart</button></a>
             </div>
         </div>
+        <!--Modal will display by default upon new game and will ask for 
+            desired difficulty and starting level-->
         <div class="game-start modal">
             <div class="modal-content">
                 <div class="choose-difficulty">
@@ -58,6 +65,8 @@
                 <button class="start btn btn--big close-modal">Start Game</button>
             </div>
         </div>
+        <!--Modal displays when a game has been won and asks player to continue to the next level.
+        The content of the modal contains all game statistics and final calculated score -->
         <div class="win modal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -77,6 +86,8 @@
                 </div>
             </div>
         </div>
+        <!--Modal displays when a game has been lost and asks player to submit their final score or start a new game.
+        The content of the modal contains all game statistics and final calculated score -->
         <div class="lose modal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -101,6 +112,8 @@
                 </div>
             </div>
         </div>
+        <!--Modal displays when a player has beaten the final level and asks player to submit their final score or start a new game.
+        The content of the modal contains all game statistics and final calculated score -->        
         <div class="game-over modal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -122,6 +135,7 @@
             </div>
         </div>
     </main>
+    <!--Footer contains links to developer's github and linkedin-->
     <footer>
         <div class="footer-content">
             <div class="social-media">

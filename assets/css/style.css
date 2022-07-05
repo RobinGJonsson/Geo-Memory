@@ -142,7 +142,7 @@ footer {
     background-color: white;
     padding: 1.25rem;
     border-radius: 10px;
-    max-width: 25rem;
+    max-width: 100%;
     margin: 3rem auto;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8), 0 7px 20px 0 rgba(0, 0, 0, 0.6);
     text-align: center;
