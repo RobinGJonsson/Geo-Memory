@@ -2,6 +2,10 @@
 
 *, *::before, *::after {box-sizing: inherit;}
 
+:root {
+    --card-size: 200px;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -14,7 +18,7 @@ body {
 }
 
 main {
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 h1,
@@ -40,10 +44,15 @@ a {
     color: black;
 }
 
+footer {
+    width: 100%;
+}
+
 .footer-content {
     clear: both;
     position: fixed;
     bottom: 0;
+    margin-top: 5rem;
     width: 100%;
     text-align: center;
 }
@@ -112,6 +121,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+    padding-top: 10vh;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
@@ -204,7 +214,7 @@ a {
 }
 
 .end-reset-container {
-    width: 20rem;
+    max-width: 20rem;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -214,15 +224,15 @@ a {
     display: grid;
     grid-template-columns: repeat(4, auto);
     margin-bottom: 2.5rem;
-    grid-gap: 10px;
+    grid-gap: 15px;
     justify-content: center;
     perspective: 500px;
 }
 
 .card {
     position: relative;
-    min-height: 100px;
-    min-width: 100px;
+    height: var(--card-size);
+    width: var(--card-size);
     cursor: pointer;
 }
 
@@ -283,4 +293,40 @@ a {
 
 .player:last-child {
     border-bottom: 0;
+}
+
+@media (max-height: 1100px) {
+    :root {
+        --card-size: 150px;
+    }
+
+    .modal {
+        padding-top: 0;
+    }
+}
+
+@media (max-height: 900px) {
+    :root {
+        --card-size: 100px;
+    }
+
+    .footer-content {
+        position: static;
+    }
+}
+
+@media (max-width: 850px) {
+    .game-area {
+        grid-template-columns: repeat(2, auto);
+    }
+    
+    .footer-content {
+        position: static;
+    }
+}
+
+@media (max-width: 320px) {
+    .game-title {
+        font-size: 1em;
+    }
 }
