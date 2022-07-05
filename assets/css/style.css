@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500&display=swap');
 
+/* --------- Everything */
+
 *, *::before, *::after {box-sizing: inherit;}
+
+/* --------- Variables*/
 
 :root {
     --card-size: 200px;
 }
 
-html {
-    box-sizing: border-box;
-}
+/* --------- Elements*/
 
 body {
+    box-sizing: border-box;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -21,32 +24,20 @@ main {
     padding-top: 10vh;
 }
 
-h1,
-h2, 
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.btn {
-    color: black;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: coral;
-}
-
 a {
     text-decoration: none;
     color: black;
 }
 
-footer {
-    width: 100%;
+/* --------- Headings*/
+
+h1,
+h2, 
+h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
 }
+
+/* --------- Footer*/
 
 .footer-content {
     clear: both;
@@ -62,45 +53,44 @@ footer {
     font-size: 200%;
 }
 
-.copy-right {
+.copyright {
     font-size: 0.8rem;
 }
 
-.title-box {
-    max-width: 500px;
-    min-width: 25vw;
-    background-color: coral;
-    border: 5px solid rgba(0, 0, 0, 0.7);
-    padding-bottom: 2rem;
-    text-align: center;
-    font-size: 150%;
-    margin: 0 auto;
+/* --------- Buttons*/
+
+.btn {
+    color: black;
+    cursor: pointer;
 }
 
-.btn--small {
+.btn--small, .btn--big {
     display: flex;
-    font-size: 100%;
-    width: 5rem;
     background-color: coral;
-    border-radius: 5px;
-    border: 2px solid black;
-    box-shadow: 0 2px 5px 0 black;
     align-items: center;
     justify-content: center;
 }
 
+.btn--small {
+    font-size: 100%;
+    width: 5rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 2px 5px 0 black;
+}
+
 .btn--big {
-    display: flex;
     font-size: 110%;
     margin: 1.25rem auto;
-    background-color: coral;
     width: 75%;
     height: 3rem;
     border-radius: 10px;
     border: 2px solid black;
     box-shadow:  0 5px 8px 0 black;
-    align-items: center;
-    justify-content: center;
+}
+
+.close-btn:hover {
+    color: coral;
 }
 
 .btn--big:focus, .btn--small:focus {
@@ -112,6 +102,8 @@ footer {
     transition: transform 100ms ease-in-out;
     transform: scale(1.05)
 }
+
+/* --------- Modals*/
 
 .modal {
     position: fixed;
@@ -128,20 +120,12 @@ footer {
     z-index: 100;
 }
 
-.front-img {
-    object-fit: cover;
-}
-
-/*Game start modal is displayed by default*/
-.game-start.modal {
-    display: block;
-}
-
 .modal-content {
     position: relative;
     background-color: white;
     padding: 1.25rem;
     border-radius: 10px;
+    width: 400px;
     max-width: 100%;
     margin: 3rem auto;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8), 0 7px 20px 0 rgba(0, 0, 0, 0.6);
@@ -151,11 +135,6 @@ footer {
 .instructions .modal-content {
     overflow-y: auto;
     max-height: 850px;
-}
-
-/*Remove scroll bar */
-.modal-content::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
 }
 
 .modal-content p {
@@ -196,6 +175,37 @@ footer {
     justify-content: center;
 }
 
+/*Game start modal is displayed by default*/
+.game-start.modal {
+    display: block;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal-content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .modal-content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+/* --------- Index page layout*/
+
+.title-box {
+    max-width: 500px;
+    min-width: 25vw;
+    background-color: coral;
+    border: 5px solid rgba(0, 0, 0, 0.7);
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 150%;
+    margin: 0 auto;
+}
+
+/* --------- Game page layout*/
+
 .game-title {
     text-align: center;
     font-size: 2rem;
@@ -213,6 +223,10 @@ footer {
     justify-content: space-between;
 }
 
+.win .modal-content, .lose .modal-content {
+    background-color: gray;
+}
+
 .end-reset-container {
     max-width: 20rem;
     display: flex;
@@ -226,8 +240,10 @@ footer {
     margin-bottom: 2.5rem;
     grid-gap: 15px;
     justify-content: center;
-    perspective: 500px;
+    /*perspective: 500px;*/
 }
+
+/* --------- Cards*/
 
 .card {
     position: relative;
@@ -237,7 +253,8 @@ footer {
 }
 
 .card-face img {
-    object-fit: cover;
+    /*
+    object-fit: cover;*/
     width: 100%;
     height: 100%;
 }
@@ -271,10 +288,7 @@ footer {
     transform: rotateY(180deg);
 }
 
-.win .modal-content, .lose .modal-content {
-    background-color: gray;
-    width: 500px;
-}
+/* --------- Leadearboard*/
 
 .lb-box {
     background-color: antiquewhite;
@@ -294,6 +308,8 @@ footer {
 .player:last-child {
     border-bottom: 0;
 }
+
+/* --------- Media queries*/
 
 @media (max-height: 1100px) {
     :root {
