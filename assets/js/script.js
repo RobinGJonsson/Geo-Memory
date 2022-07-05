@@ -46,43 +46,18 @@ document.addEventListener("DOMContentLoaded", e => {
     //Define lvl container
     let lvlContainer = document.querySelector('.choose-lvl').querySelectorAll('input');
 
-    /*WHY DOESN'T THIS WORK???????????
-
-    for (radio of difficultyContainer) {
-        console.log(radio)
-        radio.addEventListener('change', e => {
-            console.log(radio)
-            difficulty = radio.value;
-            console.log(difficulty)
-        })
-    }
-
-
-    for (radio of lvlContainer) {
-        console.log(radio)
-        radio.addEventListener('change', e => {
-            lvl = radio.value;
-            console.log(lvl)
-        })
-    }
-    */
-
     for (const radio of difficultyContainer) {
-        console.log(radio)
         radio.addEventListener('change', () => {
             difficulty = document.querySelector('input[name="difficulty"]:checked').value;
-            console.log(difficulty)
         })
     }
 
     for (const radio of lvlContainer) {
-        console.log(radio)
         radio.addEventListener('change', () => {
             lvl = document.querySelector('input[name="lvl"]:checked').value;
-            console.log(lvl)
         })
     }
-        
+    
     //Need to add to the game page specifically??????
     document.querySelector('.start').addEventListener('click', () => {
         startGame(difficulty, lvl);
@@ -123,8 +98,6 @@ function startGame(difficulty, lvl) {
     let gameArea = document.querySelector('.game-area');
 
     //Clear the game area
-    console.log(document.querySelectorAll('.card'))
-
     document.querySelectorAll('.card').forEach(card => {
         card.remove();
     });
@@ -227,7 +200,6 @@ function addCards(cardCount) {
 };
 
 function canFlip(card) {
-    console.log('checking to flip ', card)
     //If card does not have the class of visible return true else false
     return !card.classList.contains('visible');
 }
@@ -235,7 +207,6 @@ function canFlip(card) {
 function flipCard(card) {
 
     let activeCards = document.querySelectorAll('.active');
-    console.log(activeCards)
     
     if (activeCards.length == 2) {
         hideCards(activeCards) 
@@ -243,7 +214,6 @@ function flipCard(card) {
     }
 
     if (canFlip(card)) {
-        console.log(card, 'can be flipped ')
         //Increment flips 
         ++moves;
         document.querySelector('.moves').innerText = moves;
@@ -299,7 +269,6 @@ function startTimer(time) {
 
 function stopTimer(timer) {
     clearInterval(timer);
-    console.log('stopped timer')
 }
 
 function checkMatch(card1, card2) {
@@ -313,7 +282,6 @@ function checkMatch(card1, card2) {
         
         [card1, card2].forEach(card => {
             card.classList.remove('active')
-            console.log('remove active from', card)
         });
 
         //Increment score 
@@ -392,7 +360,6 @@ function calcScore() {
 
         //Display time multiplier
         (document.querySelectorAll('.time-mlp')).forEach(timeElement => {
-            console.log(timeElement)
             timeLeft = timeLeft == 0 ? 1 : timeLeft;
             timeElement.innerText = timeLeft;
         });
@@ -405,7 +372,6 @@ function calcScore() {
         let finalScore = savedScore + (score * difMlp * timeLeft);
         savedScore = finalScore;
         (document.querySelectorAll('.final-score')).forEach(finalScoreElement => {
-            console.log(finalScoreElement)
             finalScoreElement.innerText = finalScore;
         });
 
