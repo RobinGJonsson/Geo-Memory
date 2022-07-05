@@ -221,6 +221,7 @@ h3 {
     display: flex;
     grid-column: 1 / -1;
     justify-content: space-between;
+    margin: 10px 0;
 }
 
 .win .modal-content, .lose .modal-content {
@@ -332,17 +333,33 @@ h3 {
 }
 
 @media (max-width: 850px) {
-    .game-area {
-        grid-template-columns: repeat(2, auto);
+    :root {
+        --card-size: 125px;
     }
-    
+        
+    .game-area {
+        grid-gap: 5px;
+    }
+
     .footer-content {
         position: static;
     }
 }
 
+@media (max-width: 500px) {
+
+    :root {
+        --card-size: 80px;
+    }
+}
+
 @media (max-width: 320px) {
+    :root {
+        --card-size: 60px;
+    }
+
     .game-title {
         font-size: 1em;
     }
 }
+
