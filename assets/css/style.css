@@ -103,6 +103,10 @@ h3 {
     transform: scale(1.05)
 }
 
+input[type='radio'] { 
+    transform: scale(2); 
+}
+
 /* --------- Modals*/
 
 .modal {
@@ -179,6 +183,10 @@ h3 {
 .game-start.modal {
     display: block;
 }
+
+.game-options {
+    margin: 1rem 0;
+}  
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .modal-content::-webkit-scrollbar {
