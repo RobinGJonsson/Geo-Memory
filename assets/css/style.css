@@ -262,7 +262,6 @@ input[type='radio'] {
     margin-bottom: 2.5rem;
     grid-gap: 15px;
     justify-content: center;
-    perspective: 500px;
 }
 
 /* --------- Cards*/
@@ -332,6 +331,7 @@ input[type='radio'] {
 /* --------- Media queries*/
 
 @media (max-height: 1100px) {
+    
     :root {
         --card-size: 150px;
     }
@@ -346,12 +346,14 @@ input[type='radio'] {
 }
 
 @media (max-height: 900px) {
+
     :root {
         --card-size: 100px;
     }
 }
 
 @media (max-width: 850px) {
+
     :root {
         --card-size: 125px;
     }
