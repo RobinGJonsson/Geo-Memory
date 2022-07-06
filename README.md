@@ -62,11 +62,17 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - Max-height: 900px
     Change card dimensions through a css variable.
 
+- Max Height: 500px 
+    Change body and input font size.
+
 - Max-width: 850px
     Change card dimensions through a css variable.
     Change grid gap.
     Change footer position to static.
     <img src="assets/images/grid-gap.png" width=500 height=auto/>
+
+- Max-width: 750px 
+    Change grid column count.
 
 - Max-width: 500px
     Change card dimensions through a css variable.
@@ -77,6 +83,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - Max-width: 320px
     Change card dimensions through a css variable.
     Change game title font size.
+    Change difficuly class's font size.
 
 
 ### Features Left to Implement
