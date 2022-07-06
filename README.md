@@ -1,8 +1,8 @@
-# My Coach
+# Geo Memory
 
 **Version 1.0.0**
 
-Geo Memory is a regular memory game that allows the player to choose difficulty and level settings
+Geo Memory is a regular memory game that allows the player to choose difficulty and level settings. 
 
 ---
 
@@ -21,12 +21,26 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 
 - __The Game Area__
 
+    - The game area contains all relevant statistics all of which are generated through Javascript.
+    - Timer
+    - Score
+    - Moves
+    - The timer is based on the difficulty chosen by the player.
+    - It displays the current level and difficulty.
+    - It also displays the game board.
 
 -__The Game Board__
+
+    - The game board contains all cards.
+    - The cards are generated through Javascript.
+    - The amount of cards are based on the level.
+    - All cards has a front and a back image.
 
 ![Game Board](assets/images/game-board.png)
 
 -__Game Options__
+
+    - The game options allow the player to choose difficulty and initial level
 
 ![Game Options](assets/images/game-options.png)
 
@@ -68,12 +82,13 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 ### Features Left to Implement
 
 - Add more levels.
-- Add difficulty of matching country names with pictures.
+- Add the difficulty of matching country names with pictures.
 
-## Testing
+# Testing
+
+## User Features
 
 ### The Title Box Buttons
-
 
 ### Footer Icons 
 
@@ -93,6 +108,12 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 
 ### Exit/Reset Buttons 
 
+## Screen Responsivnes
+
+- I tested the all pages of the site on all different devices on https://responsivedesignchecker.com/.
+- Some elements and screen sizes needed to be media queried that I would have forgoten about otherwise.
+- Responsiveness at this time is satisfactory.
+
 ## Validator Testing
 
 - HTML
@@ -106,14 +127,14 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     
     - These errors are due to adding event listeners inside of a function. But as far as I know this is the best way to go about it anyway.
 
-
 ### Bugs
 
 - There are no known bugs.
 
 ### Solved Bugs
 
-- Instructions content is to long to show all of it, and overflows from the viewport and doesn't scroll 
+- Instructions content is to long to show all of it, and overflows from the viewport and didn't scroll.
+- I had put a min-height on the modal it sits on, so by changing it to just height solved the problem.
 
 ## Deployment
 

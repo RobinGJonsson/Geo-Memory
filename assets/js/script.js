@@ -1,8 +1,3 @@
-//ADD docstrings
-//when two cards have been flipped Make so that the cards flip back over when a new card is clicked and disregard the default timer  
-//Calculate score etc on win screen 
-//Start timer after first flipped card
-
 /*jshint esversion: 6 */
 const imageList = ['assets/images/india.jpg', 'assets/images/greece.jpg',
 'assets/images/dubai.jpg','assets/images/uk.jpg', 'assets/images/sweden.jpg',
