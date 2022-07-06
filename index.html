@@ -60,8 +60,8 @@
                         carries over to the next level and is added to the score of the current level.
                     </p>
                 </div>
-                <div class="modal-footer btn btn--small close-modal">
-                    Close
+                <div class="modal-footer">
+                    <div class="btn btn--small close-modal">Close</div>
                 </div>
             </div>
         </div>
@@ -80,6 +80,7 @@
         </div>
     </footer>
     <script>
+		/*jshint esversion: 6 */
         //Open instructions modal if instructrions button is clicked
         document.querySelector('.instructions-btn').addEventListener('click', e => {
         document.querySelector('.instructions.modal').style.display = 'block';
@@ -93,7 +94,7 @@
                 //Change all modals on page to display none
                 closeBtn.addEventListener('click', e => {
                     allModals.forEach(modal => {
-                        modal.style.display = 'none'
+                        modal.style.display = 'none';
                     });
                 });
             });
