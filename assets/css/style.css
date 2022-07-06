@@ -89,7 +89,8 @@ h3 {
 .btn--big {
     font-size: 110%;
     margin: 1.25rem auto;
-    width: 75%;
+    min-width: 75%;
+    width: 200px;
     height: 3rem;
     border-radius: 10px;
     border: 2px solid black;
@@ -136,7 +137,7 @@ input[type='radio'] {
     background-color: white;
     padding: 1.25rem;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
     max-width: 100%;
     margin: 3rem auto;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8), 0 7px 20px 0 rgba(0, 0, 0, 0.6);
@@ -183,13 +184,19 @@ input[type='radio'] {
 .modal-footer {
     display: flex;
     margin-top: 1rem;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 /*Game start modal is displayed by default*/
 .game-start.modal {
     display: block;
 }
+
+
+.win .modal-content, .lose .modal-content {
+    background-color: gray;
+}
+
 
 .game-options {
     margin: 1rem 0;
@@ -239,10 +246,6 @@ input[type='radio'] {
     margin: 10px 0;
 }
 
-.win .modal-content, .lose .modal-content {
-    background-color: gray;
-}
-
 .end-reset-container {
     max-width: 20rem;
     display: flex;
@@ -256,7 +259,7 @@ input[type='radio'] {
     margin-bottom: 2.5rem;
     grid-gap: 15px;
     justify-content: center;
-    /*perspective: 500px;*/
+    perspective: 500px;
 }
 
 /* --------- Cards*/
@@ -335,6 +338,10 @@ input[type='radio'] {
     .modal {
         padding-top: 0;
     }
+
+    .footer-content {
+        position: static;
+    }
 }
 
 @media (max-height: 900px) {
@@ -365,6 +372,10 @@ input[type='radio'] {
 
     :root {
         --card-size: 80px;
+    }
+
+    .modal-footer {
+        display: block;
     }
 }
 
