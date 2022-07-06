@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", e => {
     });
 });
 
+/** Calls all necessary functions to start the game */
 function startGame(difficulty, lvl) {
 
     document.querySelector('.lvl').innerText = lvl;
@@ -157,6 +158,7 @@ function startGame(difficulty, lvl) {
     gameArea.scrollIntoView();
 }
 
+/**Returns an array of cards with duplicates */
 function addCards(cardCount) {
     //Array of elements to append
     let cardArray = [];
@@ -200,11 +202,14 @@ function addCards(cardCount) {
     return cardArray;
 }
 
+/**Returns true if card isn't currently flipped */
 function canFlip(card) {
+
     //If card does not have the class of visible return true else false
     return !card.classList.contains('visible');
 }
 
+/**Adds a visible class to the card that is clicked and calls hideCards if there already are two visible cards on board */
 function flipCard(card) {
 
     let activeCards = document.querySelectorAll('.active');
@@ -233,6 +238,7 @@ function flipCard(card) {
     }
 }
 
+/**Places cardArray on random spaces on board */
 function shuffleCards(cardArray) {
 
     for (var i = cardArray.length - 1; i > 0; i--) {
@@ -242,6 +248,7 @@ function shuffleCards(cardArray) {
     }
 }
 
+/**Removes visible from cards */
 function hideCards(cardArray) {
 
     cardArray.forEach(card => {
@@ -249,6 +256,7 @@ function hideCards(cardArray) {
     });
 }
 
+/**Starts timer with the time parameter as a basis */
 function startTimer(time) {
     
     //Timer value will be based on difficulty 
@@ -268,10 +276,12 @@ function startTimer(time) {
     }, 1000);
 }
 
+/**Calls clearInterval on timer */
 function stopTimer(timer) {
     clearInterval(timer);
 }
 
+/**Checks if two cards match, if they do call gameOver, if not call hideCards */
 function checkMatch(card1, card2) {
 
     let cardImg1 = card1.querySelector('.front-img').getAttribute('src');
@@ -325,7 +335,9 @@ function checkMatch(card1, card2) {
     }
 }
 
+/**Displays the game over modal that represents the reason for the game over */
 function gameOver(gameEndReason) {
+
      //Make submit high score 
 
     //Display lose modal when game over
@@ -334,6 +346,7 @@ function gameOver(gameEndReason) {
     calcScore();   
 }
 
+/**Calculate and display end results */
 function calcScore() {
 
         //Display difficulty multiplier 
