@@ -3,16 +3,17 @@
 //Calculate score etc on win screen 
 //Start timer after first flipped card
 
+/*jshint esversion: 6 */
 const imageList = ['assets/images/india.jpg', 'assets/images/greece.jpg',
 'assets/images/dubai.jpg','assets/images/uk.jpg', 'assets/images/sweden.jpg',
 'assets/images/russia.jpg', 'assets/images/usa.jpg', 'assets/images/italy.jpg', 
-'assets/images/austrailia.jpg', 'assets/images/france.jpg']
+'assets/images/austrailia.jpg', 'assets/images/france.jpg'];
 
 //Contains the matched cards 
 let matchedCards = [];
 
 //Will recive the first flipped card of and revert back to null after the second card is flipped 
-let cardToCheck = null
+let cardToCheck = null;
 
 //Declare difficulty
 let difficulty = 'Easy';
@@ -49,13 +50,13 @@ document.addEventListener("DOMContentLoaded", e => {
     for (const radio of difficultyContainer) {
         radio.addEventListener('change', () => {
             difficulty = document.querySelector('input[name="difficulty"]:checked').value;
-        })
+        });
     }
 
     for (const radio of lvlContainer) {
         radio.addEventListener('change', () => {
             lvl = document.querySelector('input[name="lvl"]:checked').value;
-        })
+        });
     }
     
     //Need to add to the game page specifically??????
@@ -66,8 +67,8 @@ document.addEventListener("DOMContentLoaded", e => {
 
     //Increment one level when next level button is clicked and start game 
     document.querySelector('.nxt-lvl').addEventListener('click', () => {
-        startGame(difficulty, ++lvl)
-    })
+        startGame(difficulty, ++lvl);
+    });
 
     //Open game-start modal to allow change in difficulty and level
     document.querySelector('.new-game').addEventListener('click', () => {
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", e => {
         //Change all modals on page to display none
         closeBtn.addEventListener('click', e => {
             allModals.forEach(modal => {
-                modal.style.display = 'none'
+                modal.style.display = 'none';
             });
         });
     });
@@ -103,10 +104,10 @@ function startGame(difficulty, lvl) {
     });
 
     //Calculate amount of cards based on level 
-    cardCount = (lvl * 4 + 4)
+    cardCount = (lvl * 4 + 4);
 
     if (lvl > 3) {
-        gameArea.style.gridTemplateColumns = 'repeat(5, auto)'
+        gameArea.style.gridTemplateColumns = 'repeat(5, auto)';
     }
 
     //Create the cards 
@@ -116,7 +117,7 @@ function startGame(difficulty, lvl) {
     matchedCards = [];
     
     //Set timer based on difficulty
-    let timer = document.querySelector('.timer')
+    let timer = document.querySelector('.timer');
 
     score = 0;
 
@@ -136,7 +137,7 @@ function startGame(difficulty, lvl) {
     }
 
     //Add 5 seconds for each level
-    timeLeft += (5 * (lvl - 1))
+    timeLeft += (5 * (lvl - 1));
 
     //set score and moves to 0
     document.querySelector('.score').innerText = score;
@@ -166,7 +167,7 @@ function addCards(cardCount) {
         //Create two of the same card
         for (var i = 0; i < 2; i++) {
             let card = document.createElement('div');
-            card.classList.add('card')
+            card.classList.add('card');
             
             //Create card back and front 
             let cardFront = document.createElement('div');
@@ -176,7 +177,7 @@ function addCards(cardCount) {
             //Give the elements classes and attributes
             cardFront.classList.add('card-front', 'card-face');
             cardBack.classList.add('card-back', 'card-face');
-            frontImg.classList.add('front-img')
+            frontImg.classList.add('front-img');
             frontImg.setAttribute('src', image);
             backImg.setAttribute('src', 'assets/images/back.jpg');
 
@@ -194,10 +195,10 @@ function addCards(cardCount) {
 
             //Append card to a list to append to the gameArea after loop is finished
             cardArray.push(card);
-        };
-    };
+        }
+    }
     return cardArray;
-};
+}
 
 function canFlip(card) {
     //If card does not have the class of visible return true else false
@@ -209,8 +210,8 @@ function flipCard(card) {
     let activeCards = document.querySelectorAll('.active');
     
     if (activeCards.length == 2) {
-        hideCards(activeCards) 
-        clearTimeout(flippedTimer)
+        hideCards(activeCards);
+        clearTimeout(flippedTimer);
     }
 
     if (canFlip(card)) {
@@ -238,13 +239,13 @@ function shuffleCards(cardArray) {
         let randIndex = Math.floor(Math.random() * (i + 1));
         cardArray[randIndex].style.order = i;
         cardArray[i].style.order = randIndex;
-    };
+    }
 }
 
 function hideCards(cardArray) {
 
     cardArray.forEach(card => {
-        card.classList.remove('visible', 'active') 
+        card.classList.remove('visible', 'active');
     });
 }
 
@@ -255,13 +256,13 @@ function startTimer(time) {
 
     //Set timer interval to 1 second
     timer = setInterval(() => {
-        time--
+        time--;
         timeLeft = time;
         gametimer.innerText = time;
 
         //If time runs out call gameLose
         if (time == 0){
-            stopTimer(timer)
+            stopTimer(timer);
             gameOver('lose');
         }
     }, 1000);
@@ -273,15 +274,15 @@ function stopTimer(timer) {
 
 function checkMatch(card1, card2) {
 
-    let cardImg1 = card1.querySelector('.front-img').getAttribute('src')
-    let cardImg2 = card2.querySelector('.front-img').getAttribute('src')
+    let cardImg1 = card1.querySelector('.front-img').getAttribute('src');
+    let cardImg2 = card2.querySelector('.front-img').getAttribute('src');
 
     if (cardImg1 === cardImg2) {
         //If they match add the card to matchedCards
         matchedCards.push(card1, card2);
         
         [card1, card2].forEach(card => {
-            card.classList.remove('active')
+            card.classList.remove('active');
         });
 
         //Increment score 
@@ -295,7 +296,7 @@ function checkMatch(card1, card2) {
             if (lvl < 4) {
                 gameOver('win');    
             } else {
-                gameOver('game-over')
+                gameOver('game-over');
             }
         }
     } else {
@@ -319,8 +320,8 @@ function checkMatch(card1, card2) {
 
         //Display cards for seconds based on difficulty 
         flippedTimer = setTimeout(() => {
-            hideCards([card1, card2])
-        }, time)
+            hideCards([card1, card2]);
+        }, time);
     }
 }
 
@@ -374,6 +375,4 @@ function calcScore() {
         (document.querySelectorAll('.final-score')).forEach(finalScoreElement => {
             finalScoreElement.innerText = finalScore;
         });
-
 }
-
