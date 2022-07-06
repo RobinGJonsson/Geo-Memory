@@ -48,8 +48,10 @@ h3 {
 
 .footer-content {
     clear: both;
+    /*
     position: fixed;
     bottom: 0;
+    */
     margin-top: 5rem;
     width: 100%;
     text-align: center;
@@ -339,10 +341,6 @@ input[type='radio'] {
     .modal {
         padding-top: 0;
     }
-
-    .footer-content {
-        position: static;
-    }
 }
 
 @media (max-height: 900px) {
@@ -350,6 +348,14 @@ input[type='radio'] {
     :root {
         --card-size: 100px;
     }
+}
+
+@media (max-height: 500px) {
+
+    body, input {
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width: 850px) {
@@ -364,6 +370,13 @@ input[type='radio'] {
 
     .footer-content {
         position: static;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .game-area {
+        grid-template-columns: repeat(4, auto);
     }
 }
 
@@ -385,6 +398,10 @@ input[type='radio'] {
 
     .game-title {
         font-size: 1em;
+    }
+
+    .difficulty {
+        font-size: 75%;
     }
 }
 
