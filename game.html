@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/earth.png">
     <script src="https://kit.fontawesome.com/0be8f1ee62.js" crossorigin="anonymous"></script>
     <title>Geo Memory</title>
 </head>
@@ -32,11 +33,11 @@
         </div>
         <!--Contains reset and end game button-->
         <div class="end-reset-container">
-            <div>
-                <a href="index.html"><button class="btn btn--small">Exit</button></a>
+            <div class="btn btn--small">
+                <a href="index.html">Exit</a>
             </div>
-            <div>
-                <a href="game.html"><button class="btn btn--small">Restart</button></a>
+            <div class="btn btn--small">
+                <a href="game.html">Restart</a>
             </div>
         </div>
         <!--Modal will display by default upon new game and will ask for 
@@ -60,7 +61,9 @@
                     <label for="lvl3">Level 3</label>
                     <input type="radio" id="lvl3" name="lvl" value="3">
                 </div>
-                <button class="start btn btn--big close-modal">Start Game</button>
+                <div class="start btn btn--big close-modal">
+                    Start Game
+                </div>
             </div>
         </div>
         <!--Modal displays when a game has been won and asks player to continue to the next level.
@@ -70,7 +73,9 @@
                 <div class="modal-header">
                     <h2>You Win!</h2>
                     <p>Nice you got them all correct, you can move on to the next level</p>
-                    <a href="index.html"><button class="btn close-btn close-modal">&times;</button></a>
+                    <div class="btn close-btn close-modal">
+                        <a href="index.html">&times;</a>
+                    </div>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
@@ -79,8 +84,8 @@
                     <p>Accumulated Score: +<span class="saved-score"></span></p>
                     <p>Final Score: <span class="final-score"></span></p>
                 </div>
-                <div class="modal-footer">
-                    <button class="nxt-lvl btn btn--big close-modal">Next Level</button>
+                <div class="modal-footer nxt-lvl btn btn--big close-modal">
+                    Next Level
                 </div>
             </div>
         </div>
@@ -91,7 +96,9 @@
                 <div class="modal-header">
                     <h2>You Lose</h2>
                     <p>Ouch, well you can't win them all</p>
-                    <a href="index.html"><button class="close-btn btn close-modal">&times;</button></a>
+                    <div class="close-btn btn close-modal">
+                        <a href="index.html">&times;</a>
+                    </div>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
@@ -101,11 +108,11 @@
                     <p>Final Score: <span class="final-score"></span></p>
                 </div>
                 <div class="modal-footer">
-                    <div>
-                        <a href="leaderboard.html"><button class="highscore btn btn--big close-modal">Submit Highscore</button></a>
+                    <div class="highscore btn btn--big close-modal">
+                        <a href="leaderboard.html">Submit Highscore</a>
                     </div>
-                    <div>
-                        <a href="game.html"><button class="new-game btn btn--big close-modal">Play Again</button></a>
+                    <div class="new-game btn btn--big close-modal">
+                        <a href="game.html">Play Again</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +124,9 @@
                 <div class="modal-header">
                     <h2>You Beat the Game!</h2>
                     <p>WOW Well Done, You Are Clearly Extremely Smart!</p>
-                    <a href="index.html"><button class="btn close-btn close-modal">&times;</button></a>
+                    <div class="btn close-btn close-modal">
+                        <a href="index.html">&times;</a>
+                    </div>
                 </div>
                 <div class="modal-body">
                     <p>Score: <span class="score"></span></p>
@@ -126,9 +135,11 @@
                     <p>Accumulated Score: +<span class="saved-score"></span></p>
                     <p>Final Score: <span class="final-score"></span></p>
                 </div>
-                <div class="modal-footer">
-                    <button class="highscore btn--big close-modal"><a href="leaderboard.html">Submit Highscore</a></button>
-                    <a href="game.html"><button class="new-game btn btn--big close-modal">Play Again</button></a>
+                <div class="modal-footer highscore btn--big close-modal">
+                    <a href="leaderboard.html">Submit Highscore</a>
+                </div>
+                <div class="new-game btn btn--big close-modal">
+                    <a href="game.html">Play Again</a>
                 </div>
             </div>
         </div>
@@ -137,7 +148,7 @@
     <footer>
         <div class="footer-content">
             <div class="social-media">
-                <a href="https://github.com/RobinGJonsson/"target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/RobinGJonsson/" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://linkedin.com/in/robin-jönsson-4374641a6" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
             <div class="copyright">
