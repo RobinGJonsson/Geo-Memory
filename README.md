@@ -98,9 +98,6 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     Change card dimensions through a css variable.
     Change modal footers to display block.
 
-    <img src="assets/images/modal-footer.png" width=200/>
-
-
 - Max-width: 320px
     Change card dimensions through a css variable.
     Change the game title font size.
