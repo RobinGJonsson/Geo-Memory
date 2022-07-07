@@ -17,16 +17,18 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 ## Features
 
 - __Home Page Title Box__
-    - The title box contains buttons that let's the player access the instructions, the leaderboard and start the game.
+    - The title box contains buttons that let the player access the instructions, and the leaderboard and start the game.
 
     <img src="assets/images/title-box.png" width=50%/>
 
+
 - __Instructions__
 
-    - The instructions opens from the home page instructions button. 
+    - The instructions open from the home page instructions button. 
     - Gives the user crystal clear instructions of how the game works and its rules. It explains in detail how the difficulties are applied and what they represent.
 
     <img src="assets/images/instructions.png" width=50%/>
+
 
 - __The Game Area__
 
@@ -43,8 +45,8 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 
     - The game board contains all cards.
     - The cards are generated through Javascript.
-    - The amount of cards are based on the level.
-    - All cards has a front and a back image.
+    - The number of cards is based on the level.
+    - All cards have a front and a back image.
 
     <img src="assets/images/game-board.png" width=50%/>
 
@@ -52,14 +54,17 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - __Game Options__
 
     - The game options allow the player to choose difficulty and initial level.
+    
     <img src="assets/images/game-options.png" width=300/>
 
 
 - __The Footer__
 
-    - The footer is the same on every page of the site and always stays at below the game area.
-    - The footer contains links to the developer's github page and linkedin page through the companies icons.
+    - The footer is the same on every page of the site and always stays below the game area.
+    - The footer contains links to the developer's GitHub page and LinkedIn page through the companies icons.
+    
     <img src="assets/images/footer.png" width=300/>
+
 
 ### Future Features
 
@@ -83,7 +88,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 
 - Max-width: 850px
     Change card dimensions through a css variable.
-    Change grid gap.
+    Change grid-gap.
     Change footer position to static.
 
 - Max-width: 750px 
@@ -92,16 +97,17 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - Max-width: 500px
     Change card dimensions through a css variable.
     Change modal footers to display block.
+
     <img src="assets/images/modal-footer.png" width=200/>
-    <br>
+
 
 - Max-width: 320px
     Change card dimensions through a css variable.
-    Change game title font size.
-    Change difficuly class's font size.
+    Change the game title font size.
+    Change difficulty class's font size.
 
 # Testing
-Testing is been done manually and have gone through all the features the site provides for all types of screens, from small to desktop screens. 
+Testing is been done manually and has gone through all the features the site provides for all types of screens, from small to desktop screens. 
 
 ## User Features
 
@@ -110,31 +116,31 @@ Testing is been done manually and have gone through all the features the site pr
 - Start Game button: Works and takes the user to the game page.
 
 ### Footer Icons 
-- Github icon: Works and opens a new tab that goes to the developer's github page.
-- LinkedIn icon: Works and opens a new tab that goes to the developer's linkedIn page.
-- All social media icons works as expected on all pages of the site.
+- Github icon: Works and opens a new tab that goes to the developer's GitHub page.
+- LinkedIn icon: Works and opens a new tab that goes to the developer's LinkedIn page.
+- All social media icons work as expected on all pages of the site.
 
 ### Instructions
 - The instructions scroll as intended.
-- Both close buttons work and closes the instructions.
+- Both close buttons work and close the instructions.
 
 ### Game Options
-- Displays a modal and the game options themseleves as default upon entering or refreshing the game page. 
-- The radio buttons are clickable and all have their corretly corresponding label.
+- Displays a modal and the game options themselves as default upon entering or refreshing the game page. 
+- The radio buttons are clickable and all have their correctly corresponding label.
 - They set the difficulty and level as intended once the game is started.
 - Start game button closes the modal and starts the game as intended.
 
 ### Difficulty Container
-- Both the level and difficulty in the container recives the correct values from the game options.
+- Both the level and difficulty in the container receive the correct values from the game options.
 
 ### Info Container
 - Timer: Starts as intended when the game starts and decrements by one every second.
-- Score: Updates after two cards are flipped. It get incremented by 10 if correct and decremented by 2 if incorrect.
+- Score: Updates after two cards are flipped. It gets incremented by 10 if correct and decremented by 2 if incorrect.
 - Moves: Works and increments by one after each card flip.
 
 ### Game Board
 - The page directs user focus to the board upon game start.
-- After the game is started the correct amount of cards are created and added randomly to the game board.
+- After the game is started, the correct number of cards is created and added randomly to the game board.
 - Two new pairs of cards and a new row is added for each level as intended.
 - A minimum of four columns is always displayed upon game start.
 
@@ -144,28 +150,28 @@ Testing is been done manually and have gone through all the features the site pr
 - All cards flip over when clicked.
 - A flipped card can't be clicked again.
 - It recognizes when two cards match or don't match.
-- When two cards are flipped and are not correct the turn back after the time set by the difficulty or turn back upon a click of a new card.
-- When two cards are flipped and are correct they stay flipped and never flips back, while still alowing for new cards to be flipped and checked.
+- When two cards are flipped and are not correct turn back after the time set by the difficulty or turn back upon a click of a new card.
+- When two cards are flipped and are correct they stay flipped and never flip back, while still allowing for new cards to be flipped and checked.
 
 ### Game Over Modals
 - All modals display the correctly calculated scores and statistics.
-- All close buttons closes the modals and takes the user back to the home page.
-- The play again and next level buttons work as intended and refreshes the page.
+- All close buttons close the modals and takes the user back to the home page.
+- The play again and next level buttons work as intended and refresh the page.
 - Upon a game win the game win modal is displayed.
-- Upon a game lose the game lose modal is displayed.
-- Upon beating the game the game over modal is displayed.
+- Upon a game loss the game lose modal is displayed.
+- Upon beating the game, the game over modal is displayed.
 
 ### Exit/Reset Buttons 
 - The exit button works and takes the user back to the home page.
-- The restart button works and refeshes the game page.
+- The restart button works and refreshes the game page.
 
 ### Buttons
 - All buttons hover as intended.
 - All non-"X" buttons focus when clicked
 
-## Screen Responsivnes
-- I tested the all pages of the site on all different devices that exist on https://responsivedesignchecker.com/.
-- Some elements and screen sizes needed to be media queried that I would have forgoten about otherwise.
+## Screen Responsiveness
+- I tested all the pages of the site on all different devices that exist on https://responsivedesignchecker.com/.
+- Some elements and screen sizes needed to be media queried that I would have forgotten about otherwise.
 - Responsiveness at this time is satisfactory.
 
 ## Validator Testing
@@ -179,7 +185,7 @@ Testing is been done manually and have gone through all the features the site pr
 - JS
     - Functions declared in within loops errors were found on three occasions when passing through the official [JSHint validator](https://jshint.com/)
     
-    - These errors are due to adding event listeners inside of a function. But as far as I know this is the best way to go about it anyway.
+    - These errors are due to adding event listeners inside of a function. But as far as I know, this is the best way to go about it anyway.
 
 ### Bugs
 
@@ -187,8 +193,8 @@ Testing is been done manually and have gone through all the features the site pr
 
 ### Solved Bugs
 
-- Instructions content is to long to show all of it, and overflows from the viewport and didn't scroll.
-- I had put a min-height on the modal it sits on, so by changing it to just height solved the problem.
+- Instructions content is too long to show all of it, and overflows from the viewport and didn't scroll.
+- I had put a min-height on the modal it sits on, so changing it to just height solved the problem.
 
 
 ## Technologies Used
@@ -204,28 +210,28 @@ Testing is been done manually and have gone through all the features the site pr
 
 ## Deployment
 
-The project was deployed on GitHub Pages. I used Gitpod as a development environment where I commited all changes to git version control system.
-I used push command in Gitpod to save changes into GitHub.
+The project was deployed on GitHub Pages. I used Gitpod as a development environment where I committed all changes to the git version control system.
+I used the push command in Gitpod to save changes into GitHub.
 
 - The site was deployed to GitHub pages.
-- I logged into github
+- I logged into GitHub
 - In the GitHub repository, I went to the Settings tab.
-- From there I clicked the Pages section and cliked the source drop down menu called Branch and selected main.
+- From there I clicked the Pages section and clicked the source drop-down menu called Branch and selected main.
 - Once the master branch has been selected, the page will be automatically refreshed 
 
 The live link can be found here - https://robingjonsson.github.io/Geo-Memory/
 
-To run localy:
-- Log in to GitHub and click on repository to download
+To run locally:
+- Log in to GitHub and click on the repository to download
 - Select `Code` and click Download the ZIP file.
-- After download you can extract the file and use it in your local environment 
+- After downloading, you can extract the file and use it in your local environment 
 
 
 ## Credits
 
 ### Content
 
-- The ShuffleCards function is the Fisher Yates algorithm that I found on https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
+- The ShuffleCards function is the Fisher-Yates algorithm that I found on https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
 - All icons on the page were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
@@ -233,7 +239,7 @@ To run localy:
 - Back of cards image: https://www.pinterest.es/pin/405183297723217911/
 - Malmö Sweden Image: https://www.pexels.com/photo/monochrome-photo-of-the-turning-torso-skyscraper-5899438/
 - New York USA Image: https://www.pexels.com/photo/buildings-with-lights-at-nighttime-472037/
-- Sydney Austrailia Image:https://www.pexels.com/photo/sydney-opera-house-australia-1878293/
+- Sydney Australia Image:https://www.pexels.com/photo/sydney-opera-house-australia-1878293/
 - Moscow Russia Image: https://www.pexels.com/photo/saint-basil-s-cathedral-753339/
 - Agra India Image: https://www.pexels.com/photo/taj-mahal-and-the-four-minarets-1603650/
 - Dubai United Arab Emirates Image: https://www.pexels.com/photo/blue-and-gray-high-rise-building-162031/

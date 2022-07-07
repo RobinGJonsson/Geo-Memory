@@ -2,7 +2,7 @@
 const imageList = ['assets/images/india.jpg', 'assets/images/greece.jpg',
 'assets/images/dubai.jpg','assets/images/uk.jpg', 'assets/images/sweden.jpg',
 'assets/images/russia.jpg', 'assets/images/usa.jpg', 'assets/images/italy.jpg', 
-'assets/images/austrailia.jpg', 'assets/images/france.jpg'];
+'assets/images/australia.jpg', 'assets/images/france.jpg'];
 
 //Contains the matched cards 
 let matchedCards = [];
