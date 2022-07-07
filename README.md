@@ -19,14 +19,14 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - __Home Page Title Box__
     - The title box contains buttons that let's the player access the instructions, the leaderboard and start the game.
 
-    <img src="assets/images/title-box.png" style="max-width: 50%; height: auto;"/>
+    <img src="assets/images/title-box.png" width=50%/>
 
 - __Instructions__
 
     - The instructions opens from the home page instructions button. 
     - Gives the user crystal clear instructions of how the game works and its rules. It explains in detail how the difficulties are applied and what they represent.
 
-    <img src="assets/images/instructions.png" style="max-width:50%; height: auto;"/>
+    <img src="assets/images/instructions.png" width=50%/>
 
 - __The Game Area__
 
@@ -46,20 +46,20 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     - The amount of cards are based on the level.
     - All cards has a front and a back image.
 
-    <img src="assets/images/game-board.png" style="max-width: 50%; height: auto;"/>
+    <img src="assets/images/game-board.png" width=50%/>
 
 
 - __Game Options__
 
     - The game options allow the player to choose difficulty and initial level.
-    <img src="assets/images/game-options.png" style="min-width: 300; height: auto;"/>
+    <img src="assets/images/game-options.png" width=300/>
 
 
 - __The Footer__
 
     - The footer is the same on every page of the site and always stays at below the game area.
     - The footer contains links to the developer's github page and linkedin page through the companies icons.
-    <img src="assets/images/footer.png" style="min-width: 300px; height: auto;"/>
+    <img src="assets/images/footer.png" width=300/>
 
 ### Future Features
 
@@ -85,7 +85,6 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     Change card dimensions through a css variable.
     Change grid gap.
     Change footer position to static.
-    <img src="assets/images/grid-gap.png" style="min-width: 300px; height:auto;"/>
 
 - Max-width: 750px 
     Change grid column count.
@@ -93,7 +92,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - Max-width: 500px
     Change card dimensions through a css variable.
     Change modal footers to display block.
-    <img src="assets/images/modal-footer.png" style="min-width:200px; height:auto;/>
+    <img src="assets/images/modal-footer.png" width=200/>
     <br>
 
 - Max-width: 320px
@@ -184,12 +183,12 @@ Testing is been done manually and have gone through all the features the site pr
 
 ### Bugs
 
-    - There are no known bugs.
+- There are no known bugs.
 
 ### Solved Bugs
 
-    - Instructions content is to long to show all of it, and overflows from the viewport and didn't scroll.
-    - I had put a min-height on the modal it sits on, so by changing it to just height solved the problem.
+- Instructions content is to long to show all of it, and overflows from the viewport and didn't scroll.
+- I had put a min-height on the modal it sits on, so by changing it to just height solved the problem.
 
 
 ## Technologies Used
@@ -208,11 +207,11 @@ Testing is been done manually and have gone through all the features the site pr
 The project was deployed on GitHub Pages. I used Gitpod as a development environment where I commited all changes to git version control system.
 I used push command in Gitpod to save changes into GitHub.
 
-    - The site was deployed to GitHub pages.
-    - I logged into github
-    - In the GitHub repository, I went to the Settings tab.
-    - From there I clicked the Pages section and cliked the source drop down menu called Branch and selected main.
-    - Once the master branch has been selected, the page will be automatically refreshed 
+- The site was deployed to GitHub pages.
+- I logged into github
+- In the GitHub repository, I went to the Settings tab.
+- From there I clicked the Pages section and cliked the source drop down menu called Branch and selected main.
+- Once the master branch has been selected, the page will be automatically refreshed 
 
 The live link can be found here - https://robingjonsson.github.io/Geo-Memory/
 
