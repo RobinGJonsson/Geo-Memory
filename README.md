@@ -19,14 +19,14 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - __Home Page Title Box__
     - The title box contains buttons that let's the player access the instructions, the leaderboard and start the game.
 
-    <img src="assets/images/title-box.png" max-width=300 height=auto/>
+    <img src="assets/images/title-box.png" max-width=50% height=auto/>
 
 - __Instructions__
 
     - The instructions opens from the home page instructions button. 
     - Gives the user crystal clear instructions of how the game works and its rules. It explains in detail how the difficulties are applied and what they represent.
 
-    <img src="assets/images/instructions.png" min-width=300 height=auto/>
+    <img src="assets/images/instructions.png" max-width=50 height=auto/>
 
 - __The Game Area__
 
@@ -46,7 +46,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     - The amount of cards are based on the level.
     - All cards has a front and a back image.
 
-    <img src="assets/images/game-board.png" max-width=500 height=auto/>
+    <img src="assets/images/game-board.png" max-width=50% height=auto/>
 
 
 - __Game Options__
@@ -106,11 +106,11 @@ Testing is been done manually and have gone through all the features the site pr
 
 ## User Features
 
-### The Title Box Buttons
+## The Title Box Buttons
     - Instructions button: Works and opens up a modal and displays scrollable instructions.
     - Start Game button: Works and takes the user to the game page.
 
-### Footer Icons 
+## Footer Icons 
     - Github icon: Works and opens a new tab that goes to the developer's github page.
     - LinkedIn icon: Works and opens a new tab that goes to the developer's linkedIn page.
     - All social media icons works as expected on all pages of the site.
