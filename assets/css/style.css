@@ -355,7 +355,6 @@ input[type='radio'] {
     body, input {
         font-size: 1rem;
     }
-
 }
 
 @media (max-width: 850px) {
@@ -370,13 +369,6 @@ input[type='radio'] {
 
     .footer-content {
         position: static;
-    }
-}
-
-@media (max-width: 750px) {
-
-    .game-area {
-        grid-template-columns: repeat(4, auto);
     }
 }
 
