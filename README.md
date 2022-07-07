@@ -19,14 +19,14 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - __Home Page Title Box__
     - The title box contains buttons that let's the player access the instructions, the leaderboard and start the game.
 
-    <img src="assets/images/title-box.png" max-width=50% height=auto/>
+    <img src="assets/images/title-box.png" style="max-width: 50%; height: auto;"/>
 
 - __Instructions__
 
     - The instructions opens from the home page instructions button. 
     - Gives the user crystal clear instructions of how the game works and its rules. It explains in detail how the difficulties are applied and what they represent.
 
-    <img src="assets/images/instructions.png" max-width=50 height=auto/>
+    <img src="assets/images/instructions.png" style="max-width:50%; height: auto;"/>
 
 - __The Game Area__
 
@@ -46,20 +46,20 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     - The amount of cards are based on the level.
     - All cards has a front and a back image.
 
-    <img src="assets/images/game-board.png" max-width=50% height=auto/>
+    <img src="assets/images/game-board.png" style="max-width: 50%; height: auto;"/>
 
 
 - __Game Options__
 
     - The game options allow the player to choose difficulty and initial level.
-    <img src="assets/images/game-options.png" min-width=300 height=auto/>
+    <img src="assets/images/game-options.png" style="min-width: 300; height: auto;"/>
 
 
 - __The Footer__
 
     - The footer is the same on every page of the site and always stays at below the game area.
     - The footer contains links to the developer's github page and linkedin page through the companies icons.
-    <img src="assets/images/footer.png" min-width=300 height=auto/>
+    <img src="assets/images/footer.png" style="min-width: 300px; height: auto;"/>
 
 ### Future Features
 
@@ -85,7 +85,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     Change card dimensions through a css variable.
     Change grid gap.
     Change footer position to static.
-    <img src="assets/images/grid-gap.png" min-width=300 height=auto/>
+    <img src="assets/images/grid-gap.png" style="min-width: 300px; height:auto;"/>
 
 - Max-width: 750px 
     Change grid column count.
@@ -93,7 +93,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - Max-width: 500px
     Change card dimensions through a css variable.
     Change modal footers to display block.
-    <img src="assets/images/modal-footer.png" min-width=200 height=auto/>
+    <img src="assets/images/modal-footer.png" style="min-width:200px; height:auto;/>
     <br>
 
 - Max-width: 320px
@@ -106,68 +106,68 @@ Testing is been done manually and have gone through all the features the site pr
 
 ## User Features
 
-## The Title Box Buttons
-    - Instructions button: Works and opens up a modal and displays scrollable instructions.
-    - Start Game button: Works and takes the user to the game page.
+### The Title Box Buttons
+- Instructions button: Works and opens up a modal and displays scrollable instructions.
+- Start Game button: Works and takes the user to the game page.
 
-## Footer Icons 
-    - Github icon: Works and opens a new tab that goes to the developer's github page.
-    - LinkedIn icon: Works and opens a new tab that goes to the developer's linkedIn page.
-    - All social media icons works as expected on all pages of the site.
+### Footer Icons 
+- Github icon: Works and opens a new tab that goes to the developer's github page.
+- LinkedIn icon: Works and opens a new tab that goes to the developer's linkedIn page.
+- All social media icons works as expected on all pages of the site.
 
 ### Instructions
-    - The instructions scroll as intended.
-    - Both close buttons work and closes the instructions.
+- The instructions scroll as intended.
+- Both close buttons work and closes the instructions.
 
-### Game Options'
-    - Displays a modal and the game options themseleves as default upon entering or refreshing the game page. 
-    - The radio buttons are clickable and all have their corretly corresponding label.
-    - They set the difficulty and level as intended once the game is started.
-    - Start game button closes the modal and starts the game as intended.
+### Game Options
+- Displays a modal and the game options themseleves as default upon entering or refreshing the game page. 
+- The radio buttons are clickable and all have their corretly corresponding label.
+- They set the difficulty and level as intended once the game is started.
+- Start game button closes the modal and starts the game as intended.
 
-### Difficulty Container'
-    - Both the level and difficulty in the container recives the correct values from the game options.
+### Difficulty Container
+- Both the level and difficulty in the container recives the correct values from the game options.
 
 ### Info Container
-    - Timer: Starts as intended when the game starts and decrements by one every second.
-    - Score: Updates after two cards are flipped. It get incremented by 10 if correct and decremented by 2 if incorrect.
-    - Moves: Works and increments by one after each card flip.
+- Timer: Starts as intended when the game starts and decrements by one every second.
+- Score: Updates after two cards are flipped. It get incremented by 10 if correct and decremented by 2 if incorrect.
+- Moves: Works and increments by one after each card flip.
 
 ### Game Board
-    - The page directs user focus to the board upon game start.
-    - After the game is started the correct amount of cards are created and added randomly to the game board.
-    - Two new pairs of cards and a new row is added for each level as intended.
-    - A minimum of four columns is always displayed upon game start.
+- The page directs user focus to the board upon game start.
+- After the game is started the correct amount of cards are created and added randomly to the game board.
+- Two new pairs of cards and a new row is added for each level as intended.
+- A minimum of four columns is always displayed upon game start.
 
 ### Cards
-    - The cards resize upon hovering.
-    - All cards on the board are clickable.
-    - All cards flip over when clicked.
-    - A flipped card can't be clicked again.
-    - It recognizes when two cards match or don't match.
-    - When two cards are flipped and are not correct the turn back after the time set by the difficulty or turn back upon a click of a new card.
-    - When two cards are flipped and are correct they stay flipped and never flips back, while still alowing for new cards to be flipped and checked.
+- The cards resize upon hovering.
+- All cards on the board are clickable.
+- All cards flip over when clicked.
+- A flipped card can't be clicked again.
+- It recognizes when two cards match or don't match.
+- When two cards are flipped and are not correct the turn back after the time set by the difficulty or turn back upon a click of a new card.
+- When two cards are flipped and are correct they stay flipped and never flips back, while still alowing for new cards to be flipped and checked.
 
 ### Game Over Modals
-    - All modals display the correctly calculated scores and statistics.
-    - All close buttons closes the modals and takes the user back to the home page.
-    - The play again and next level buttons work as intended and refreshes the page.
-    - Upon a game win the game win modal is displayed.
-    - Upon a game lose the game lose modal is displayed.
-    - Upon beating the game the game over modal is displayed.
+- All modals display the correctly calculated scores and statistics.
+- All close buttons closes the modals and takes the user back to the home page.
+- The play again and next level buttons work as intended and refreshes the page.
+- Upon a game win the game win modal is displayed.
+- Upon a game lose the game lose modal is displayed.
+- Upon beating the game the game over modal is displayed.
 
 ### Exit/Reset Buttons 
-    - The exit button works and takes the user back to the home page.
-    - The restart button works and refeshes the game page.
+- The exit button works and takes the user back to the home page.
+- The restart button works and refeshes the game page.
 
 ### Buttons
-    - All buttons hover as intended.
-    - All non-"X" buttons focus when clicked
+- All buttons hover as intended.
+- All non-"X" buttons focus when clicked
 
 ## Screen Responsivnes
-    - I tested the all pages of the site on all different devices that exist on https://responsivedesignchecker.com/.
-    - Some elements and screen sizes needed to be media queried that I would have forgoten about otherwise.
-    - Responsiveness at this time is satisfactory.
+- I tested the all pages of the site on all different devices that exist on https://responsivedesignchecker.com/.
+- Some elements and screen sizes needed to be media queried that I would have forgoten about otherwise.
+- Responsiveness at this time is satisfactory.
 
 ## Validator Testing
 
