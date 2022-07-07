@@ -198,7 +198,7 @@ input[type='radio'] {
 }
 
 
-.win .modal-content, .lose .modal-content {
+.win .modal-content, .lose .modal-content, game-over .modal-content {
     background-color: gray;
 }
 
