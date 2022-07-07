@@ -4,7 +4,7 @@
 
 Geo Memory is a regular memory game that allows the player to choose difficulty and level settings. 
 
-## **Table of Contents**
+## Table of Contents
 
 1. [Features](#Features)
 2. [Testing](#Testing)
@@ -19,46 +19,47 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - __Home Page Title Box__
     - The title box contains buttons that let's the player access the instructions, the leaderboard and start the game.
 
-![Title Box](assets/images/title-box.png)
+    <img src="assets/images/title-box.png" max-width=300 height=auto/>
 
 - __Instructions__
 
     - The instructions opens from the home page instructions button. 
     - Gives the user crystal clear instructions of how the game works and its rules. It explains in detail how the difficulties are applied and what they represent.
 
-![Instructions](assets/images/instructions.png)
+    <img src="assets/images/instructions.png" min-width=300 height=auto/>
 
 - __The Game Area__
 
     - The game area contains all relevant statistics all of which are generated through Javascript.
-    - Timer
-    - Score
-    - Moves
+    * Timer
+    * Score
+    * Moves
     - The timer is based on the difficulty chosen by the player.
     - It displays the current level and difficulty.
     - It also displays the game board.
 
--__The Game Board__
+
+- __The Game Board__
 
     - The game board contains all cards.
     - The cards are generated through Javascript.
     - The amount of cards are based on the level.
     - All cards has a front and a back image.
 
-![Game Board](assets/images/game-board.png)
+    <img src="assets/images/game-board.png" max-width=500 height=auto/>
 
--__Game Options__
 
-    - The game options allow the player to choose difficulty and initial level
+- __Game Options__
 
-![Game Options](assets/images/game-options.png)
+    - The game options allow the player to choose difficulty and initial level.
+    <img src="assets/images/game-options.png" min-width=300 height=auto/>
+
 
 - __The Footer__
 
     - The footer is the same on every page of the site and always stays at below the game area.
     - The footer contains links to the developer's github page and linkedin page through the companies icons.
-
-![Footer](assets/images/footer.png)
+    <img src="assets/images/footer.png" min-width=300 height=auto/>
 
 ### Future Features
 
@@ -84,7 +85,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
     Change card dimensions through a css variable.
     Change grid gap.
     Change footer position to static.
-    <img src="assets/images/grid-gap.png" width=500 height=auto/>
+    <img src="assets/images/grid-gap.png" min-width=300 height=auto/>
 
 - Max-width: 750px 
     Change grid column count.
@@ -92,7 +93,7 @@ Geo Memory is a regular memory game that allows the player to choose difficulty 
 - Max-width: 500px
     Change card dimensions through a css variable.
     Change modal footers to display block.
-    <img src="assets/images/modal-footer.png" width=500 height=auto/>
+    <img src="assets/images/modal-footer.png" min-width=200 height=auto/>
     <br>
 
 - Max-width: 320px
@@ -162,6 +163,7 @@ Testing is been done manually and have gone through all the features the site pr
 ### Buttons
     - All buttons hover as intended.
     - All non-"X" buttons focus when clicked
+
 ## Screen Responsivnes
     - I tested the all pages of the site on all different devices that exist on https://responsivedesignchecker.com/.
     - Some elements and screen sizes needed to be media queried that I would have forgoten about otherwise.
@@ -190,7 +192,7 @@ Testing is been done manually and have gone through all the features the site pr
     - I had put a min-height on the modal it sits on, so by changing it to just height solved the problem.
 
 
-## **Technologies Used**
+## Technologies Used
 
 - [Gitpod](https://gitpod.io/)
 - [Github](https://github.com/)
